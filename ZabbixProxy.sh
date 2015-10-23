@@ -42,7 +42,7 @@ test -f $fielzabbixproxy.bka || cp $fielzabbixproxy $fielzabbixproxy.bka
 
 cat << EOF > $filezabbixproxy
 Hostname=proxy
-Server=10.0.0.20
+Server=$ZabbixServerIP
 DBName=/tmp/zabbix_proxy.db
 LogFile=/tmp/zabbix_proxy.log
 DBUser=root
@@ -53,4 +53,6 @@ firewall-cmd --permanent --add-port=10051/tcp
 systemctl restart firewalld
 # 
 zabbix_proxy
-#bye
+#
+echo "Chu y them Zabbix Server Ip vao thu muc /usr/local/etc/zabbix_proxy.conf"
+echo "Them proxy trung voi hostname tai Dashboard"
