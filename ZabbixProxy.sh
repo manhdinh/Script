@@ -25,7 +25,7 @@ tar -zxvf zabbix-2.2.10.tar.gz
 # Tai cac goi bo tro
 echo "Tai cac goi bo tro"
 sleep 5
-yum install zlib-devel glibc-devel sqlite-devel curl-devel libidn-devel openssl-devel net-snmp-devel popt-devel rpm-devel OpenIPMI-devel libssh2-devel
+yum install zlib-devel glibc-devel sqlite-devel curl-devel libidn-devel openssl-devel net-snmp-devel popt-devel rpm-devel OpenIPMI-devel libssh2-devel -y
 # Su dung checkinstall
 echo "Su dung checkinstall"
 mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
