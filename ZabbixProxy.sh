@@ -3,11 +3,12 @@
 
 echo "127.0.0.1 localhost" >> /etc/hosts
 echo "nameserver 8.8.8.8" >> /etc/resovl.conf
-
+sleep 5
 yum update -y
 
 # Cai dat cac goi co ban 
 echo " Cai dat cac goi co ban "
+sleep 3
 yum install gcc make wget -y
 
 # Tao user va group
@@ -16,11 +17,14 @@ groupadd zabbix
 useradd -g zabbix zabbix
 
 # Tai goi zabbix 
+echo "Tai goi zabbix tu source"
+sleep 5
 wget http://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/2.2.10/zabbix-2.2.10.tar.gz
 tar -zxvf zabbix-2.2.10.tar.gz
 
 # Tai cac goi bo tro
 echo "Tai cac goi bo tro"
+sleep 5
 yum install zlib-devel glibc-devel sqlite-devel curl-devel libidn-devel openssl-devel net-snmp-devel popt-devel rpm-devel OpenIPMI-devel libssh2-devel
 # Su dung checkinstall
 echo "Su dung checkinstall"
@@ -30,6 +34,7 @@ yum install checkinstall-1.6.2-3.el6.1.x86_64.rpm -y
 
 # Configure va make
 echo "Configure va make"
+sleep 5
 cd zabbix-2.2.10
 ./configure --enable-proxy --with-sqlite3 --with-libcurl --with-netsnmp --with-openipmi
 make
@@ -56,3 +61,4 @@ zabbix_proxy
 #
 echo "Chu y them Zabbix Server Ip vao thu muc /usr/local/etc/zabbix_proxy.conf"
 echo "Them proxy trung voi hostname tai Dashboard"
+sleep 5
