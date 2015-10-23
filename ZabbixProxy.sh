@@ -16,7 +16,7 @@ groupadd zabbix
 useradd -g zabbix zabbix
 
 # Tai goi zabbix 
-wget http://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Stable/2.2.10/zabbix-2.2.10.tar.gz
+
 tar -zxvf zabbix-2.2.10.tar.gz
 
 # Tai cac goi bo tro
