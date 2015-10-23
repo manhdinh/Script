@@ -52,5 +52,5 @@ firewall-cmd --permanent --add-port=10050/tcp
 firewall-cmd --permanent --add-port=10051/tcp
 systemctl restart firewalld
 # 
-zabbix-proxy
+zabbix_proxy
 #bye
